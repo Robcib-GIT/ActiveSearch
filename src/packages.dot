@@ -1,0 +1,7 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"path_planning" [color="black", label="path_planning", shape="box", style="solid"];
+"robotControl" [color="black", label="robotControl", shape="box", style="solid"];
+"path_planning" -> "robotControl" [arrowhead="open", arrowtail="none"];
+}

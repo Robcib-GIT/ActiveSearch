@@ -1,0 +1,35 @@
+{
+  "name": "packages",
+  "directed": true,
+  "strict": false,
+  "charset": "utf-8",
+  "rankdir": "BT",
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "path_planning",
+      "color": "black",
+      "label": "path_planning",
+      "shape": "box",
+      "style": "solid"
+    },
+    {
+      "_gvid": 1,
+      "name": "robotControl",
+      "color": "black",
+      "label": "robotControl",
+      "shape": "box",
+      "style": "solid"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 1,
+      "arrowhead": "open",
+      "arrowtail": "none"
+    }
+  ]
+}

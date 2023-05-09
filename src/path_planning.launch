@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="unitree_legged_real" name="path_planning" type="path_planning.py">
+    </node>
+</launch>

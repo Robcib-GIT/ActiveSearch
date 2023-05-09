@@ -1,0 +1,18 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# Doors dataset https://github.com/MiguelARD/DoorDetect-Dataset
+# Example usage: python3 train.py --data doors.yaml --weights yolov5n.pt --epochs 5 
+# parent
+# ├── yolov5
+# └── datasets
+#     └── DoorDetect-Dataset   ← downloads here
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../datasets/DoorDetect-Dataset  # dataset root dir
+train: train/images/  # train images (relative to 'path')
+val: val/images/  # val images (relative to 'path')
+test:  # test images (optional)
+
+# Classes
+nc: 4  # number of classes
+names: ['door', 'handle', 'cabinet door', 'refrigerator door']  # class names

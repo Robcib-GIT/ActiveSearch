@@ -1,0 +1,98 @@
+{
+  "name": "classes",
+  "directed": true,
+  "strict": false,
+  "charset": "utf-8",
+  "rankdir": "BT",
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "path_planning.DetOptions",
+      "color": "black",
+      "fontcolor": "black",
+      "label": "{DetOptions|agnostic_nms : bool\\laugment : bool\\lcamera : bool\\lclasses : int\\lconf_thres : float\\ldata\\ldevice : str\\ldnn : bool\\lexist_ok : bool\\lhalf : bool\\lhide_conf : bool\\lhide_labels : bool\\limgsz : list\\liou_thres : float\\lline_thickness : int\\lmax_det : int\\lname : str\\lnosave : bool\\lproject\\lros : bool\\lsave_array : bool\\lsave_conf : bool\\lsave_crop : bool\\lsave_txt : bool\\lsource : str\\lupdate : bool\\lview_img : bool\\lvisualize : bool\\lweights\\l|}",
+      "shape": "record",
+      "style": "solid"
+    },
+    {
+      "_gvid": 1,
+      "name": "robotControl.PID",
+      "color": "black",
+      "fontcolor": "black",
+      "label": "{PID|kd : int\\lki : int\\lkp : int\\ltau : int\\l|}",
+      "shape": "record",
+      "style": "solid"
+    },
+    {
+      "_gvid": 2,
+      "name": "path_planning.Planner",
+      "color": "black",
+      "fontcolor": "black",
+      "label": "{Planner|allTags\\lbase\\lcandidates : list\\ldata\\ldetDoors : Detection\\ldetRooms : Detection\\ldetections : list\\ldetector : Detection\\ldoors : list\\lhumans : list\\limgTopic : str\\lmap : list\\lmarkerID : int\\lmarker_pub : Publisher\\lmodelo\\lnumHabs\\lobjIds : list\\lobjTags : list\\lodom : NoneType\\lopcDoors\\lopcRooms\\lopciones\\lparams : dict\\lrobot\\lroomTags\\lroomType : ndarray\\lsubImage : NoneType\\lsubMap : NoneType\\lx_test\\lx_train\\ly_test\\ly_train\\l|adjustNave(x, y)\\lcalculateFitness(candidate)\\lconvertDetection()\\lconvertDetectionDoors()\\lconvertDetectionRooms()\\lcoordToIndex(x, y)\\lcountNotExploredPoints(x, y, R)\\ldetectDoors()\\lexplore()\\lexploreRoom()\\lindexToCoord(i, j)\\lisExplored(i, j)\\lisFree(i, j)\\lpublishPoint(pos, markerType, time)\\lreadImg()\\lreadMap()\\ltrain()\\l}",
+      "shape": "record",
+      "style": "solid"
+    },
+    {
+      "_gvid": 3,
+      "name": "robotControl.Robot",
+      "color": "black",
+      "fontcolor": "black",
+      "label": "{Robot|dir : str\\lhistPos : list\\llastDate\\lmaxDistLin : float\\lminDistLin : float\\lodom\\lpath_pub : Publisher\\lpath_pub_split : Publisher\\lpid\\lpos\\lpub_traj : Publisher\\lpub_vel : Publisher\\lsubOdom : Subscriber\\lsubVel : Subscriber\\ltheorPos : list\\ltolAng : float\\lvelV : int\\lvelW : int\\lw : int\\lx : int\\ly : int\\l|callbackOdom(odom)\\lcallbackVel(vel)\\leuler2quat(a)\\lmoveTo(x, y, w_ref, onlyOr)\\lmoveToPoint(x, y, w_ref, onlyOr)\\lquat2euler(q)\\lreadPos()\\lsavePos()\\lspliteTraj(points, tangents, resolution)\\lwrapToPi(alpha)\\l}",
+      "shape": "record",
+      "style": "solid"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 2,
+      "arrowhead": "diamond",
+      "arrowtail": "none",
+      "fontcolor": "green",
+      "label": "opciones",
+      "style": "solid"
+    },
+    {
+      "_gvid": 1,
+      "tail": 0,
+      "head": 2,
+      "arrowhead": "diamond",
+      "arrowtail": "none",
+      "fontcolor": "green",
+      "label": "opcDoors",
+      "style": "solid"
+    },
+    {
+      "_gvid": 2,
+      "tail": 0,
+      "head": 2,
+      "arrowhead": "diamond",
+      "arrowtail": "none",
+      "fontcolor": "green",
+      "label": "opcRooms",
+      "style": "solid"
+    },
+    {
+      "_gvid": 3,
+      "tail": 1,
+      "head": 3,
+      "arrowhead": "diamond",
+      "arrowtail": "none",
+      "fontcolor": "green",
+      "label": "pid",
+      "style": "solid"
+    },
+    {
+      "_gvid": 4,
+      "tail": 3,
+      "head": 2,
+      "arrowhead": "diamond",
+      "arrowtail": "none",
+      "fontcolor": "green",
+      "label": "robot",
+      "style": "solid"
+    }
+  ]
+}
